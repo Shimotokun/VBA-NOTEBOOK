@@ -1,0 +1,44 @@
+cells(1,"b")
+[a1].select
+Sub DFDF()
+[a1:a10].Offset(2, 3).Select
+[a1].resize(5, 3).Select
+
+Sub ddd()
+dim rg as range, x as integer
+for x =2 then set rg =cells(x,1)
+set rg = union(rg,cells(x,1))
+next x 
+rg.select
+end Sub
+
+
+Sub ddd()
+Dim rg As Range, x As Integer
+For x = 2 To 10 Step 2
+If x = 2 Then Set rg = Cells(x, 1)
+Set rg = Union(rg, Cells(x, 1))
+Next x
+rg.Select
+End Sub
+
+range("c4:f5").entirerow.select
+range("c4:f5").entirecolumn.select
+
+selection.value = 100
+
+ActiveSheet.Range("A1").AutoFilter  '// 設定 or 解除Sub ss()
+
+ActiveSheet.AutoFiltermode = false 
+
+Range("a:b").Find(what:="金额").Select
+
+
+End Sub
+
+
+Sub ss()
+Range("a:b").Find(what:="金额").CurrentRegion.Select
+Selection.AutoFilter field:=3, Criteria1:="2022/10/10"
+
+End Sub
