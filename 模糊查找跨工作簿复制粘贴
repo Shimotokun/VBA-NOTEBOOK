@@ -1,0 +1,44 @@
+
+
+'模糊查找跨工作簿复制粘贴
+
+
+Sub dfdf()
+
+Dim W As Workbook
+For Each W In Workbooks
+If W.Name Like "工作簿1*" Then
+W.Activate
+'Exit Sub
+End If
+Next
+
+End Sub
+
+Sub dfdfii()
+
+
+Range("a1").Copy
+
+
+
+End Sub
+
+Sub ddddd()
+
+
+
+Dim Wo As Workbook
+For Each Wo In Workbooks
+If Wo.Name Like "测试*" Then
+Wo.Activate
+'Exit Sub
+End If
+Next
+
+Range("b1").PasteSpecial
+
+
+End Sub
+
+
