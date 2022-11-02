@@ -12,6 +12,7 @@ next x
 rg.select
 end Sub
 
+'隔行选中单元格
 '隔行选中
 
 Sub ddd()
@@ -22,6 +23,22 @@ Set rg = Union(rg, Cells(x, 1))
 Next x
 rg.Select
 End Sub
+
+'隔行变色
+Sub ddd()
+Dim rg As Range, x As Integer
+For x = 2 To 10 Step 2
+If x = 2 Then Set rg = Cells(x, 1)
+Set rg = Union(rg, Cells(x, 1))
+Next x
+rg.entirerow.Select
+selection.interior.color =10079487
+'selection.interior.color = RGB(1,1,1)
+
+End Sub
+
+
+
 
 range("c4:f5").entirerow.select
 range("c4:f5").entirecolumn.select
