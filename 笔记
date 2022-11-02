@@ -12,6 +12,7 @@ next x
 rg.select
 end Sub
 
+'隔行选中
 
 Sub ddd()
 Dim rg As Range, x As Integer
