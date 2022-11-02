@@ -43,3 +43,29 @@ Range("a:b").Find(what:="金额").CurrentRegion.Select
 Selection.AutoFilter field:=3, Criteria1:="2022/10/10"
 
 End Sub
+
+
+
+'查找某列第一个空单元格
+
+Sub test()
+Dim ws As Worksheet
+
+Set ws = ActiveSheet
+
+For Each cell In ws.Columns(2).Cells
+    If IsEmpty(cell) = True Then cell.Select: Exit For
+Next cell
+End Sub
+
+'查找某列第一个空单元格
+
+Sub test()
+Dim ws As Worksheet
+
+Set ws = ActiveSheet
+
+For Each cell In ws.Columns(2).Cells
+     If Len(cell) = 0 Then cell.Select: Exit For
+Next cell
+End Sub
